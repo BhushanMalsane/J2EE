@@ -15,6 +15,7 @@
 <th>Employee id</th>
 <th>Employee Name</th>
 <th>Employee Sal</th>
+<th>Actions</th>
 
 </tr>
 <!--it will retrieve list from request object and apply for loop to generate 
@@ -29,10 +30,16 @@ row in the table for each employee -->
 <td> ${emp.id} </td>
 <td> ${emp.name} </td>
 <td> ${emp.sal} </td>
+<td>
+<a href="deleteemp?eid=${emp.id}">Delete</a>
+<a href="editemp?eid=${emp.id}">Edit</a>
 
+</td>
 </tr>
 </c:forEach>
 </table>
 
+
+<a href="addemp.jsp">AddEmployee</a>
 </body>
 </html>

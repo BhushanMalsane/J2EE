@@ -21,4 +21,29 @@ public class EmpServiceImpl implements EmpService {
 		return edao.getAllEmployees();
 	}
 
+	@Override
+	public void deleteById(int empid) {
+		// TODO Auto-generated method stub
+		edao.removeById(empid);
+		
+	}
+
+	
+	public Employee getById(int empid) {
+		// TODO Auto-generated method stub
+		return edao.findById(empid);
+	}
+
+	@Override
+	public void modify(Employee e) {
+		// TODO Auto-generated method stub
+		edao.updateById(e);;
+	}
+
+	@Override
+	public void add(Employee e) {
+		// TODO Auto-generated method stub
+		edao.insert(e);
+	}
+
 }

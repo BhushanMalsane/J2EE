@@ -8,6 +8,16 @@ public interface EmpDao {
 
 	List<Employee> getAllEmployees();
 
+    void removeById(int empid);
+
+	Employee findById(int empid);
+
+	void updateById(Employee e);
+
+	void insert(Employee e);
+
+	
+
 
 
 }

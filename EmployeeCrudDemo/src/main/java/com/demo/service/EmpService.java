@@ -8,6 +8,16 @@ public interface EmpService {
 
 	List<Employee> findAllEmployee();
 
+	void deleteById(int empid);
+
+	Employee getById(int empid);
+
+	void modify(Employee e);
+
+	void add(Employee e);
+
+	
+
 	
 
 }
