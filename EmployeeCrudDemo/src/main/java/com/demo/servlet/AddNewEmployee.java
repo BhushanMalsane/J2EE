@@ -32,7 +32,7 @@ public class AddNewEmployee extends HttpServlet {
 		EmpService eservice = new EmpServiceImpl();
 		eservice.add(e);
 		RequestDispatcher rs = request.getRequestDispatcher("employee");
-		
+		rs.forward(request, response);
 		
 		
 	}

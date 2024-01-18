@@ -24,7 +24,7 @@ public class EmpDaoImpl implements EmpDao{
 			selbyid = conn.prepareStatement("select * from employeenew where id = ?");
 			upbyid = conn.prepareStatement("update employeenew set name = ? , sal=? where id= ?");
 			//upById=conn.prepareStatement("update employee set ename=?,sal=? where empid=?");
-			ins = conn.prepareStatement("insert into employeenew values (?,?,?)");
+			ins = conn.prepareStatement("insert into employeenew values(?,?,?)");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -110,7 +110,7 @@ public class EmpDaoImpl implements EmpDao{
 
 
 
-	@Override
+	
 	public void insert(Employee e) {
 		// TODO Auto-generated method stub
 		try {
@@ -118,7 +118,7 @@ public class EmpDaoImpl implements EmpDao{
 			ins.setString(2,e.getName());
 			ins.setInt(3,e.getSal());
 			ins.executeUpdate();
-
+             System.out.println(e);
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
