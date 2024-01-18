@@ -30,7 +30,7 @@ public List<Product> findAllproducts() {
 public void save(Product p) {
 	String str="insert into pro values(?,?,?,?)";
 	jdbcTemplate.update(str,new Object[] {p.getPid(),
-			p.getPname(),p.getPrice(),p.getQty()});
+			p.getPname(),p.getQty(),p.getPrice()});
 	
 }
 
